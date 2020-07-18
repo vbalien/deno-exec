@@ -56,7 +56,7 @@ export const exec = async (
     console.log(`    Exec Command Splits:  [${splits}]`);
   }
 
-  let p = Deno.run({ cmd: splits, stdout: "piped", stderr: "piped" });
+  let p = Deno.run({ cmd: splits, stdout: "inherit", stderr: "inherit" });
 
   let response = "";
   let decoder = new TextDecoder();
